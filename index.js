@@ -8,7 +8,11 @@ breadBot.on('error', (e) => {
 
 breadBot.on('message', (message) => {
     if (message.channel.name && message.channel.name.toLowerCase().includes('bread')) {
-        message.react('🍞');
+        if (message.author.name.includes('🇫🇷') || (message.member.nickname.includes('🇫🇷'))) {
+            message.react('🥖');
+        } else {
+            message.react('🍞');
+        }
     }
 });
 
