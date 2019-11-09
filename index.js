@@ -7,7 +7,7 @@ breadBot.on('error', (e) => {
 });
 
 breadBot.on('message', (message) => {
-    if (message.channel.name && message.channel.name.toLowerCase().includes('bread')) {
+    if (message.channel.name && message.channel.name.toLowerCase().includes('bread') || message.channel.name.toLowerCase().includes('🍞')) {
         if (message.author.username.includes('🇫🇷') || (message.member.nickname && message.member.nickname.includes('🇫🇷'))) {
             message.react('🥖');
         } else {
